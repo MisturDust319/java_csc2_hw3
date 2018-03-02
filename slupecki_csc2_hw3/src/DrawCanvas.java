@@ -92,6 +92,12 @@ public class DrawCanvas extends Canvas implements MouseListener,
             case LINE :
                 g.drawLine(x1, y1, x2, y2);
                 break;
+            case SQUARE:
+            	if(filledColor == null)
+                    g.draw3DRect(x, y, width, width, true);
+                else
+                    g.fill3DRect(x, y, width, width, true);
+                break;
         }
     }
 

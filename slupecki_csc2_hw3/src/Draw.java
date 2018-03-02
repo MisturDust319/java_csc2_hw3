@@ -110,6 +110,9 @@ public class Draw extends Frame implements ActionListener, ItemListener {
         else if(event.getSource() == line) { // Line button
             canvas.setShape(DrawCanvas.LINE);
         }
+        else if(event.getSource() == square) { // Line button
+            canvas.setShape(DrawCanvas.SQUARE);
+        }
     }
 
     /**

@@ -28,6 +28,8 @@ public class Draw extends Frame implements ActionListener, ItemListener {
     Button line;
     Button square;
     Button oval;
+    Button clear;
+    Button reset;
 
     // Color choice box
     Choice colorChoice;
@@ -47,7 +49,7 @@ public class Draw extends Frame implements ActionListener, ItemListener {
         add(topPanel, BorderLayout.NORTH);
 
         // create button control
-        Panel buttonPanel = new Panel(new GridLayout(2, 3));
+        Panel buttonPanel = new Panel(new GridLayout(3, 3));
         topPanel.add(buttonPanel);
 
         circle = new Button("Circle");
@@ -65,6 +67,11 @@ public class Draw extends Frame implements ActionListener, ItemListener {
         buttonPanel.add(square);
         oval = new Button("Oval");
         buttonPanel.add(oval);
+        //clear/reset
+        clear = new Button("Clear");
+        buttonPanel.add(clear);
+        reset = new Button("Reset");
+        buttonPanel.add(reset);
 
         // add button listener
         circle.addActionListener(this);

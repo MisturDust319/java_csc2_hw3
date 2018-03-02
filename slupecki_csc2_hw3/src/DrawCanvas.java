@@ -98,6 +98,12 @@ public class DrawCanvas extends Canvas implements MouseListener,
                 else
                     g.fill3DRect(x, y, width, width, true);
                 break;
+            case OVAL:
+            	if(filledColor == null)
+                    g.drawOval(x, y, width, height);
+                else
+                    g.fillOval(x, y, width, height);
+                break;
         }
     }
 

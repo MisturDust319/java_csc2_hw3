@@ -16,6 +16,11 @@ public class DrawCanvas extends Canvas implements MouseListener,
     public static final int CIRCLE = 1;
     public static final int ROUNDED_RECTANGLE = 2;
     public static final int RECTANGLE_3D = 3;
+    // Stan's Additions
+    public static final int LINE = 4;
+    public static final int SQUARE = 5;
+    public static final int OVAL = 6;
+    
 
     // Coordinates of points to draw
     private int x1, y1, x2, y2;
@@ -83,6 +88,9 @@ public class DrawCanvas extends Canvas implements MouseListener,
                     g.draw3DRect(x, y, width, height, true);
                 else
                     g.fill3DRect(x, y, width, height, true);
+                break;
+            case LINE :
+                g.drawLine(x1, y1, x2, y2);
                 break;
         }
     }

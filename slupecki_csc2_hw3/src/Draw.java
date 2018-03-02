@@ -70,6 +70,11 @@ public class Draw extends Frame implements ActionListener, ItemListener {
         circle.addActionListener(this);
         roundRec.addActionListener(this);
         threeDRec.addActionListener(this);
+        
+        //Stan's additions: action listeners
+        line.addActionListener(this);
+        square.addActionListener(this);
+        oval.addActionListener(this);
 
         // create panel for color choices
         Panel colorPanel = new Panel(new FlowLayout(FlowLayout.LEFT));
@@ -101,6 +106,9 @@ public class Draw extends Frame implements ActionListener, ItemListener {
         }
         else if(event.getSource() == threeDRec) { // 3D rectangle button
             canvas.setShape(DrawCanvas.RECTANGLE_3D);
+        }
+        else if(event.getSource() == line) { // Line button
+            canvas.setShape(DrawCanvas.LINE);
         }
     }
 

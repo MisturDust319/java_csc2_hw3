@@ -83,6 +83,7 @@ public class Draw extends Frame implements ActionListener, ItemListener {
         square.addActionListener(this);
         oval.addActionListener(this);
         clear.addActionListener(this);
+        reset.addActionListener(this);
 
         // create panel for color choices
         Panel colorPanel = new Panel(new FlowLayout(FlowLayout.LEFT));
@@ -125,7 +126,16 @@ public class Draw extends Frame implements ActionListener, ItemListener {
             canvas.setShape(DrawCanvas.OVAL);
         }
         else if(event.getSource() == clear) {
-            canvas.clear();
+            canvas.clear(); //clear the canvas
+        }
+        else if(event.getSource() == reset) {
+            canvas.setShape(DrawCanvas.CIRCLE);
+            // set reset the shape to circle
+            canvas.setFilledColor(COLORS[0]);
+            // reset fill color
+            colorChoice.select(COLOR_NAMES[0]);
+            //reset the fill color
+            canvas.clear(); // clear the canvas
         }
     }
 

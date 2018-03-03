@@ -19,7 +19,7 @@ public class DrawCanvas extends Canvas implements MouseListener,
     // Stan's Additions
     public static final int LINE = 4;
     public static final int SQUARE = 5;
-    public static final int OVAL = 6;
+    public static final int OVAL = 6;   
     
 
     // Coordinates of points to draw
@@ -106,6 +106,18 @@ public class DrawCanvas extends Canvas implements MouseListener,
                     g.fillOval(x, y, width, height);
                 break;
         }
+    }
+    
+    /**
+     * clear()
+     * clears the canvas
+     */
+    public void clear() {
+    	//create a graphics object,
+    	//then use it to create a clear rectangle the size of the canvas
+    	//this clears the canvas
+    	Graphics g = this.getGraphics();
+    	g.clearRect(0, 0, this.getWidth(), this.getHeight());
     }
 
     /**

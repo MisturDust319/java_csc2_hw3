@@ -82,6 +82,7 @@ public class Draw extends Frame implements ActionListener, ItemListener {
         line.addActionListener(this);
         square.addActionListener(this);
         oval.addActionListener(this);
+        clear.addActionListener(this);
 
         // create panel for color choices
         Panel colorPanel = new Panel(new FlowLayout(FlowLayout.LEFT));
@@ -122,6 +123,9 @@ public class Draw extends Frame implements ActionListener, ItemListener {
         }
         else if(event.getSource() == oval) { // Line button
             canvas.setShape(DrawCanvas.OVAL);
+        }
+        else if(event.getSource() == clear) {
+            canvas.clear();
         }
     }
 
